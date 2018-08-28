@@ -161,7 +161,7 @@ hours = 12;
 }
  
  
-const w = ['./'];
+const w = ['./PicsArt_08-28-04.00.22.png','./PicsArt_08-28-03.59.14.png'];
               let Image = Canvas.Image,
                   canvas = new Canvas(557, 241),
                   ctx = canvas.getContext('2d');
