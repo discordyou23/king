@@ -140,7 +140,7 @@ let welcomer = member.guild.channels.find("name","welcome");
 
 
 client.on('guildMemberAdd', member => {
-const channel = member.guild.channels.find("name","welcome")
+const channel = member.guild.channels.find("name","🔱welcomeالترحيب🔱")
 if (member.user.bot) return;
 var Canvas = require('canvas')  
 var jimp = require('jimp')
