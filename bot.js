@@ -612,10 +612,12 @@ let args = message.content.split(" ").slice(1);
        message.channel.sendEmbed(embed)
 
 };
+	  
+});
 
-    
-    
-    
+
+
+
   client.on('message', message => {
     if (message.content.startsWith("Kavatar")) {
         var mentionned = message.mentions.users.first();
