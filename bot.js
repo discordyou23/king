@@ -5,7 +5,7 @@ const dateFormat = require('dateformat');
 const fs = require('fs');
 var Canvas = require('canvas')
 var jimp = require('jimp')
-const prefix = "K";
+const prefix = "$";
 client.on('ready', () => {
     console.log('I am ready!');
 });
@@ -19,7 +19,7 @@ client.on('message', message => {
 
 
 client.on('ready', () => {
-client.user.setGame(`Khelp |system server king`,'https://www.twitch.tv/v5bz');
+client.user.setGame(`$help|$invite`,'https://www.twitch.tv/v5bz');
 });
 
 
@@ -30,40 +30,46 @@ client.user.setGame(`Khelp |system server king`,'https://www.twitch.tv/v5bz');
 
 
    client.on('message', message => {
-     if (message.content === "Khelp") {
+     if (message.content === "$help") {
 message.author.send("KING BOT☆" + `  **
 .KING BOT COMMANDS.
 .WELCOME HELP BOT.
 ╔[❖══════❖]╗
  "🔚🚩اوامر عامة🚩"
 ╚[❖══════❖]╝
-❖-Kprofile🌷      |لتشوف ملفك الشخصي.
-❖-Kping📶         |يجيب لك سرعة اتصال البوت.
-❖-Ksay📚          |يكرر كلامك.
-❖-Kembed📑        |يكرر كلامك بطريقة اخرى.
-❖-Kavatar📷       |يعرض لك صورتك.
-❖-Kcredit💱       |لتعرف رصيدك بلبوت.
-❖-Kdaily💳        |لتأخذ راتبك اليومي من البوت.
-❖-Kcredits        |لتعطي كريدت لصديقك
+❖-$profile🌷      |لتشوف ملفك الشخصي.
+❖-$ping📶         |يجيب لك سرعة اتصال البوت.
+❖-$say📚          |يكرر كلامك.
+❖-$embed📑        |يكرر كلامك بطريقة اخرى.
+❖-$avatar📷       |يعرض لك صورتك.
+❖-$credit💱       |لتعرف رصيدك بلبوت.
+❖-$daily💳        |لتأخذ راتبك اليومي من البوت.
+❖-$credits        |لتعطي كريدت لصديقك
 ╔[❖══════❖]╗
 "🔚ℹاوامر السيرفراتℹ"
 ╚[❖══════❖]╝
-❖-Kbc      |لأرسال رسالة لجميع الموجودين في سيرفر.
-❖-Kinfo     |لتشوف اوامر autorole لما شخص يدخل سيرفر يعطيه رتبة
-❖-Kaddrole   |لصناعة رتبة
-❖-Kclear〰        |لمسح الشات.
-❖-Kunbanall       |لفك البند عن جميع الأعضاء.
-❖-Kban🚫          |لتبنيد الشخص مع السبب.
-❖-Kkick❎         |لطرد الشخص مع السبب.
-❖-Ksetchannel🌟   |لأنشاء روم كتابي.
-❖-Ksetvoice⭐     |لأنشاء روم صوتي.
-❖-Kbans🔢         |لمعرفة كم عضو مبند.
-❖-Kunban🚩        |فك الباند عن الشخص.
-❖-Kmutechannel🔰      |لأعطاء ميوت صوتي منشن الشخص ليعطي ميوت.
-❖-Kunmutechannel♣   |لفك الميوت الصوتي منشن الشخص ويفك.
+❖-$bc      |لأرسال رسالة لجميع الموجودين في سيرفر.
+❖-$info     |لتشوف اوامر autorole لما شخص يدخل سيرفر يعطيه رتبة
+❖-$addrole   |لصناعة رتبة
+❖-$clear〰        |لمسح الشات.
+❖-$unbanall       |لفك البند عن جميع الأعضاء.
+❖-$ban🚫          |لتبنيد الشخص مع السبب.
+❖-$kick❎         |لطرد الشخص مع السبب.
+❖-$setchannel🌟   |لأنشاء روم كتابي.
+❖-$setvoice⭐     |لأنشاء روم صوتي.
+❖-$bans🔢         |لمعرفة كم عضو مبند.
+❖-$unban🚩        |فك الباند عن الشخص.
+❖-$mutechannel🔰      |لأعطاء ميوت صوتي منشن الشخص ليعطي ميوت.
+❖-$unmutechannel♣   |لفك الميوت الصوتي منشن الشخص ويفك.
 ❖-Kimage✨        |لتطليع صورت سيرفر.
-❖-Kmusic🎶        |امعرفة أوامر الموسيقى
+❖-$invite😊       |لدعوة البوت لسيرفرك.
+❖-$support
+❖-$music🎶        |امعرفة أوامر الموسيقى
 ╚[❖══════❖]╝
+welcomer =ساوي غرفة أسمها welcomer ليرحب بيها
+log =كرمال يحميلك السيرفر من تهكير.
+
+
 **`);
     }
 });
@@ -71,10 +77,10 @@ message.author.send("KING BOT☆" + `  **
 
 
    client.on('message', message => {
-     if (message.content === "Khelp") {
+     if (message.content === "$help") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
-               .setFooter('SYSTEM SERVER')
+               .setFooter('king bot')
   .setColor("#9B59B6")
   .addField("Done✅| تــــم" , "✉ | تم ارسالك في الخاص")
 
@@ -84,8 +90,28 @@ message.author.send("KING BOT☆" + `  **
     }
 });
 
+
+
+
+   client.on('message', message => {
+	   if(message.content.startsWith(`${prefix}invite`)){
+		   if(!message.channel.guild) return message.channel.send("This Command is Just For Servers!")
+		   var embed = new Discord.RichEmbed()
+		   .setTitle(">> ClickHere To Add" + `${client.user.username}` + " <<")
+		   .setURL("https://discordapp.com/oauth2/authorize?client_id=" + `${client.user.id}` + "&scope=bot&permissions=8")
+		   .setTimestamp()
+		   .setFooter(`Requested By | ${message.author.username}`)
+		   .setColor("RANDOM")
+		   message.channel.send(":white_check_mark: | Check Your DM! تم الأرسال بلخاص")
+		   message.author.send({embed})
+	   }
+   });
+
+
+
+
   client.on('message',async message => {
-if(message.content === 'Kunbanall') {
+if(message.content === '$unbanall') {
 message.guild.fetchBans().then(ba => {
 ba.forEach(ns => {
 message.guild.unban(ns);
@@ -99,7 +125,7 @@ message.guild.unban(ns);
 
 
    client.on('message', message => {
-     if (message.content === "Kunbanall") {
+     if (message.content === "$unbanall") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
                .setFooter('SYSTEM SERVER')
@@ -115,7 +141,7 @@ message.guild.unban(ns);
 
 
 client.on("guildMemberAdd", member => {
-let welcomer = member.guild.channels.find("name","🔱welcomeالترحيب🔱");
+let welcomer = member.guild.channels.find("name","welcomer");
       if(!welcomer) return;
       if(welcomer) {
          moment.locale('ar-ly');
@@ -140,7 +166,7 @@ let welcomer = member.guild.channels.find("name","🔱welcomeالترحيب🔱"
 
 
 client.on('guildMemberAdd', member => {
-const channel = member.guild.channels.find("name","🔱welcomeالترحيب🔱")
+const channel = member.guild.channels.find("name","welcomer")
 if (member.user.bot) return;
 var Canvas = require('canvas')  
 var jimp = require('jimp')
@@ -419,7 +445,7 @@ message.channel.sendFile(canvas.toBuffer())
 
 
 client.on("message", (message) => {
-if (message.content.startsWith("Ksetchannel")) {
+if (message.content.startsWith("$setchannel")) {
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'text');
 message.channel.sendMessage('تـم إنـشاء روم كـتابـي بنجاح|✅')
@@ -432,7 +458,7 @@ message.channel.sendMessage('تـم إنـشاء روم كـتابـي بنجا�
 
 
 client.on("message", (message) => {
-if (message.content.startsWith("Ksetvoice")) {
+if (message.content.startsWith("$setvoice")) {
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'voice');
     message.channel.sendMessage('تـم إنـشاء روم صـوتي بنجاح|✅')
@@ -619,7 +645,7 @@ let args = message.content.split(" ").slice(1);
 
 
   client.on('message', message => {
-    if (message.content.startsWith("Kavatar")) {
+    if (message.content.startsWith("$avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -640,7 +666,7 @@ let args = message.content.split(" ").slice(1);
 
 
    client.on("message", message => {
-    const prefix = "L"
+    const prefix = "$"
 
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -662,7 +688,7 @@ let args = message.content.split(" ").slice(1);
 
 client.on('message', message => {
   if(!message.channel.guild) return;
-if(message.content.startsWith('Kbc')) {
+if(message.content.startsWith('$bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
@@ -800,7 +826,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    var prefix = "K"
+    var prefix = "$"
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -841,7 +867,7 @@ client.on('message', message => {
 
 	client.on('message', async message =>{
   if (message.author.boss) return;
-	var prefix = "K";
+	var prefix = "$";
 
 if (!message.content.startsWith(prefix)) return;
 	let command = message.content.split(" ")[0];
@@ -902,7 +928,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return mess
 
 
 client.on('message' , message => {
-    var prefix = "K";
+    var prefix = "$";
     let user = message.mentions.users.first()|| client.users.get(message.content.split(' ')[1])
     if(message.content.startsWith(prefix + 'unban')) {
         if(!user) return  message.channel.send(`Do this ${prefix} <@ID user> \n or \n ${prefix}unban ID user`);
@@ -925,7 +951,7 @@ client.on('message' , message => {
     
     
 client.on('message', message => {
-if (message.content.startsWith("Kaddrole")) {
+if (message.content.startsWith("$addrole")) {
              if(!message.channel.guild) return message.reply('**Commands in the server**');
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply('⚠ **You do not have permissions**');
         let args = message.content.split(" ").slice(1);
@@ -1487,7 +1513,16 @@ ${prefix}queue ⇏ ♠لمعرفة قآئمة التشغيل❗
 
 	  
 	  
-	  
+client.on("message", message => {
+ if (message.content === "$support") {
+  const embed = new Discord.RichEmbed()
+      .setColor("RANDOM")
+      .setFooter('© king bot جميع الحقوق محفوظة 2018 لــبوت')
+      .addField('سيرفر الدعم الفني', `https://discord.gg/jmYuzVF`)
+  message.author.send({embed});
+      message.channel.send(":white_check_mark: | Check Your DM تم الأرسال بلخاص")
+ }
+});	  
 	  
 	  
 	  
