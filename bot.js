@@ -46,21 +46,6 @@ message.author.send("KING BOT☆" + `  **
 
 
 
-   client.on('message', message => {
-     if (message.content === "#help") {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-               .setFooter('king bot')
-  .setColor("#9B59B6")
-  .addField("✅شوف خاصك يا أسد")
-
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
-
-
 
 
 
@@ -380,7 +365,7 @@ client.on("message", (message) => {
 if (message.content.startsWith("#setchannel")) {
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'text');
-message.channel.sendMessage('تـم إنـشاء روم كـتابي يا أسد')
+message.channel.sendMessage('تـم إنـشاء روم كـتابي يا أسد|✅')
 
 }
 });
@@ -393,7 +378,7 @@ client.on("message", (message) => {
 if (message.content.startsWith("#setvoice")) {
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'voice');
-    message.channel.sendMessage('تـم إنـشاء روم صوتي يا أسد✅')
+    message.channel.sendMessage('تـم إنـشاء روم صوتي يا أسد|✅')
 
 }
 });
@@ -565,7 +550,7 @@ let args = message.content.split(" ").slice(1);
 }).then(messages => message.channel.bulkDelete(messages));
 
    var embed = new Discord.RichEmbed()
-        .setTitle('تم مسح الشات بنجاح|✅')
+        .setTitle('تم مسح شات الأسود|✅')
         .setColor('RED')
        message.channel.sendEmbed(embed)
 
@@ -1077,7 +1062,7 @@ Sender <@${message.author.id}>                                                  
 
 // Code By : EpicEdiTeD
 client.on('message',async Epic => {
-  var codes = "#online";
+  var codes = "#";
   if(Epic.content.startsWith(codes + "vonline")) {
   if(!Epic.guild.member(Epic.author).hasPermissions('MANAGE_CHANNELS')) return Epic.reply(':x: **ليس لديك الصلاحيات الكافية**');
   if(!Epic.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS','MANAGE_ROLES_OR_PERMISSIONS'])) return Epic.reply(':x: **ليس معي الصلاحيات الكافية**');
@@ -1122,6 +1107,10 @@ client.on('message',async Epic => {
 
 
 
+  client.on('message', msg => {
+  if(msg.content === '#help')
+  msg.reply('شوف خاصك يا أسد|✅')
+});
 
 
 
