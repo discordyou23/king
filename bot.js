@@ -5,7 +5,7 @@ const dateFormat = require('dateformat');
 const fs = require('fs');
 var Canvas = require('canvas')
 var jimp = require('jimp')
-const prefix = "K";
+const prefix = "D";
 client.on('ready', () => {
     console.log('I am ready!');
 });
@@ -20,7 +20,7 @@ client.on('message', message => {
 
 
 client.on('ready', () => {                           
-client.user.setGame(`Khelp`,'https://www.twitch.tv/fofodiscord');                                                                                                                                                                                                                                                                                                                                                                                                                            
+client.user.setGame(`Dhelp | DyzerYT-دايزر`,'https://www.twitch.tv/fofodiscord');                                                                                                                                                                                                                                                                                                                                                                                                                            
 });
 
 
@@ -103,7 +103,7 @@ client.on('message', async msg => { // eslint-disable-line
 			        .setDescription(`**الرجآء من حضرتك إختيآر رقم المقطع** :
 ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-					.setFooter("Minecraft Kinq Bot")
+					.setFooter("DyzerYT | دايزر")
 					msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
 
 					// eslint-disable-next-line max-depth
@@ -269,35 +269,38 @@ ${prefix}queue ⇏ ♠لمعرفة قآئمة التشغيل❗
 
 
    client.on('message', message => {
-     if (message.content === "Khelp") {
-message.author.send("Minecraft Kinq Bot" + `  **
+     if (message.content === "Dhelp") {
+message.author.send("DyzerYT-دايزر BOT" + `  **
 
-❖-Kping📶         |يجيب لك سرعة اتصال البوت.
-❖-Kid        |لتشوف الايدي حقك
-❖-Kinvite         |لدعوة البوت.
-❖-Ksay📚          |يكرر كلامك.
-❖-Kembed📑        |يكرر كلامك بطريقة اخرى.
-❖-Kavatar📷       |يعرض لك صورتك.
-❖-Kcredit💱       |لتعرف رصيدك بلبوت.
-❖-Kdaily💳        |لتأخذ راتبك اليومي من البوت.
-❖-Kcredits        |لتعطي كريدت لصديقك
-❖-Kimage✨        |لتطليع صورت سيرفر.
-❖-Ksetchannel💣     |لأنشاء روم كتابي
-❖-Ksetvoice🔰       |لأنشاء روم صوتي.
-❖-Kmutechannel👑    |لعطي ميوت لروم.
-❖-Kunmutechannel〽  |لفك ميوت عن روم.
-❖-Kkick🎋      |لطرد شخص
-❖-Kban🎇       |لتبنيد شخص
-❖-Kunban🎆     |لفك باند عن الشخص.
-❖-Kclear📛     |لمسح الشات.
-❖-Kaddrole😊   |لأنشاء رتبة.
-❖-Kbot⚠       |لتشوف معلومات البوت
-❖-Kserversbot💯   |لتشوف السيرفرات الموجود فيها البوت
-❖-Kbans🚩      |لتشوف الأشخاص المبندين.
-❖-Kbc😆          |خاصية البرودكاست.
-❖-Kmusic🎶     |أوامر الموسيقى.
-welcome =ساوي هذي الغرفة ليرحيب فيه
-log =ساوي ذي غرفة لحماية السيرفر
+=======================================
+❖-Dping📶         |يجيب لك سرعة اتصال البوت.
+❖-Didℹ        |لتشوف الايدي حقك
+❖-Dinvite✅         |لدعوة البوت.
+❖-Dsay📚          |يكرر كلامك.
+❖-Dembed📑        |يكرر كلامك بطريقة اخرى.
+❖-Davatar📷       |يعرض لك صورتك.
+❖-Dcredit💱       |لتعرف رصيدك بلبوت.
+❖-Ddaily💳        |لتأخذ راتبك اليومي من البوت.
+❖-Dcredits        |لتعطي كريدت لصديقك
+❖-Dimage✨        |لتطليع صورت سيرفر.
+❖-Dsetchannel💣     |لأنشاء روم كتابي
+❖-Dsetvoice🔰       |لأنشاء روم صوتي.
+❖-Dmutechannel👑    |لعطي ميوت لروم.
+❖-Dunmutechannel〽  |لفك ميوت عن روم.
+❖-Dkick🎋      |لطرد شخص
+❖-Dban🎇       |لتبنيد شخص
+❖-Dunban🎆     |لفك باند عن الشخص.
+❖-Dclear📛     |لمسح الشات.
+❖-Daddrole😊   |لأنشاء رتبة.
+❖-Dbot⚠       |لتشوف معلومات البوت
+❖-Dserversbot💯   |لتشوف السيرفرات الموجود فيها البوت
+❖-Dbans🚩      |لتشوف الأشخاص المبندين.
+❖-Dbc😆          |خاصية البرودكاست.
+❖-Dmusic🎶     |أوامر الموسيقى.
+welcome = ساوي هذي الغرفة ليرحيب فيه
+leave = ليقلك الشخص الغادر السيرفر
+log = ساوي ذي غرفة لحماية السيرفر
+=======================================
 
 
 **`);
@@ -310,13 +313,13 @@ log =ساوي ذي غرفة لحماية السيرفر
 
 
 client.on('message', message => {
-    if (message.content.startsWith("Kbot")) {
+    if (message.content.startsWith("Dbot")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``INFO Minecraft Kinq Bot`` ')
+            .setTitle('``INFO DyzerYT | دايزر`` ')
             .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``servers``', [client.guilds.size], true)
             .addField('``channels``' , `[ ${client.channels.size} ]` , true)
@@ -355,11 +358,11 @@ client.on('message', message => {
 
 client.on('message', message => {
   if(!message.channel.guild) return;
-if(message.content.startsWith('Kbc')) {
+if(message.content.startsWith('Dbc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-let copy = "Minecraft Kinq Bot";
+let copy = "DyzerYT | دايزر";
 let request = `Requested By ${message.author.username}`;
 if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
 msg.react('✅')
@@ -426,7 +429,7 @@ client.on('message', message => {
 
   
   client.on("message", msg => {
-           var prefix = "K";
+           var prefix = "D";
   if(msg.content.startsWith (prefix + "id")) {
     if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');
       const embed = new Discord.RichEmbed();
@@ -447,28 +450,46 @@ client.on('message', message => {
 
 
 
-client.on("guildMemberAdd", member => {
-let welcomer = member.guild.channels.find("name","welcome");
-      if(!welcomer) return;
-      if(welcomer) {
-         moment.locale('ar-ly');
-         var h = member.user;
-        let norelden = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(h.avatarURL)
-        .setAuthor(h.username,h.avatarURL)
-        .addField(': تاريخ دخولك الدسكورد',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)            
-         .addField(': تاريخ دخولك السيرفر',`${moment(member.joinedAt).format('D/M/YYYY h:mm a ')} \n\`\`${moment(member.joinedAt).startOf(' ').fromNow()}\`\``, true) 
-         .setFooter(`${h.tag}`,"https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif")
-     welcomer.send({embed:norelden});          
-               
- 
-      }
-      });
 
 
 
 
+    client.on('guildMemberAdd', member => {
+        let channel = member.guild.channels.find('name', 'welcome');
+        let memberavatar = member.user.avatarURL
+          if (!channel) return;
+        let embed = new Discord.RichEmbed()
+            .setColor('RANDOM')
+            .setThumbnail(memberavatar)
+            .addField('🎽 | name :  ',`${member}`)
+            .addField('📢 | نورت السيرفر يا قلبي' , `Welcome to the server, ${member}`)
+            .addField('🆔 | user :', "**[" + `${member.id}` + "]**" )
+                    .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
+                   
+                      .addField("Name:",`<@` + `${member.id}` + `>`, true)
+                         
+                                         .addField(' الـسيرفر', `${member.guild.name}`,true)
+                                           
+         .setFooter(`${member.guild.name}`)
+            .setTimestamp()
+       
+          channel.sendEmbed(embed);
+        });
+        
+        client.on('guildMemberRemove', member => {
+            var embed = new Discord.RichEmbed()
+            .setAuthor(member.user.username, member.user.avatarURL)
+            .setThumbnail(member.user.avatarURL)
+            .setTitle(`الله معاك ✋:skin-tone-1: 😔`)
+            .setDescription(`مع السلامه تشرفنا بك ✋:skin-tone-1: 😔 `)
+            .addField('👤   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
+            .setColor('RED')
+            .setFooter(`==== نــتــمــنــآ لــكــم آســتــمـــتــآع ====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
+        
+        var channel =member.guild.channels.find('name', 'leave')
+        if (!channel) return;
+        channel.send({embed : embed});
+        })
 
 
 
@@ -476,7 +497,7 @@ let welcomer = member.guild.channels.find("name","welcome");
 
 
 client.on("message", (message) => {
-if (message.content.startsWith("Ksetchannel")) {
+if (message.content.startsWith("Dsetchannel")) {
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'text');
 message.channel.sendMessage('تـم إنـشاء روم كـتابي|✅')
@@ -489,7 +510,7 @@ message.channel.sendMessage('تـم إنـشاء روم كـتابي|✅')
 
 
 client.on("message", (message) => {
-if (message.content.startsWith("Ksetvoice")) {
+if (message.content.startsWith("Dsetvoice")) {
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'voice');
     message.channel.sendMessage('تـم إنـشاء روم صوتي|✅')
@@ -670,7 +691,7 @@ let args = message.content.split(" ").slice(1);
 
 
   client.on('message', message => {
-    if (message.content.startsWith("Kavatar")) {
+    if (message.content.startsWith("Davatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -691,7 +712,7 @@ let args = message.content.split(" ").slice(1);
 
 
    client.on("message", message => {
-    const prefix = "K"
+    const prefix = "D"
 
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -792,7 +813,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    var prefix = "K"
+    var prefix = "D"
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -833,7 +854,7 @@ client.on('message', message => {
 
 	client.on('message', async message =>{
   if (message.author.boss) return;
-	var prefix = "K";
+	var prefix = "D";
 
 if (!message.content.startsWith(prefix)) return;
 	let command = message.content.split(" ")[0];
@@ -894,7 +915,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return mess
 
 
 client.on('message' , message => {
-    var prefix = "K";
+    var prefix = "D";
     let user = message.mentions.users.first()|| client.users.get(message.content.split(' ')[1])
     if(message.content.startsWith(prefix + 'unban')) {
         if(!user) return  message.channel.send(`Do this ${prefix} <@ID user> \n or \n ${prefix}unban ID user`);
@@ -917,7 +938,7 @@ client.on('message' , message => {
     
     
 client.on('message', message => {
-if (message.content.startsWith("Kaddrole")) {
+if (message.content.startsWith("Daddrole")) {
              if(!message.channel.guild) return message.reply('**Commands in the server**');
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply('⚠ **You do not have permissions**');
         let args = message.content.split(" ").slice(1);
@@ -1175,7 +1196,7 @@ Sender <@${message.author.id}>                                                  
 
 
   client.on('message', msg => {
-  if(msg.content === 'Khelp')
+  if(msg.content === 'Dhelp')
   msg.reply('تم الأرسال بلخاص|✅')
 });
 
