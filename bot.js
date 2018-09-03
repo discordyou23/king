@@ -476,22 +476,22 @@ channel.send({embed : embed});
 
 
 
+client.on('guildMemberRemove', member => {
+    var embed = new Discord.RichEmbed()
+    .setAuthor(member.user.username, member.user.avatarURL)
+    .setThumbnail(member.user.avatarURL)
+    .setTitle(`👋Leave Member💣`)
+    .setDescription(`👑Good Bay👑`)
+    .addField('💔تبقى بعد خروج صديقناℹ',`**[ ${member.guild.memberCount} ]**`,true)
+    .setColor('RANDOM')
+    .setFooter(`✅DyzerYT | دايزر BOT😉`, '')
 
+var channel =member.guild.channels.find('name', 'leave')
+if (!channel) return;
+channel.send({embed : embed});
+});
         
-        client.on('guildMemberRemove', member => {
-            var embed = new Discord.RichEmbed()
-            .setAuthor(member.user.username, member.user.avatarURL)
-            .setThumbnail(member.user.avatarURL)
-            .setTitle(`😣GOOD BAY-الله معاك💔`)
-            .setDescription(`😠بس أذا كنت مساوى شي بلا رجعا👊`)
-            .addField('ℹتبقى بعد خروج العضو✅',`**[ ${member.guild.memberCount} ]**`,true)
-            .setColor('RANDOM')
-            .setFooter('DyzerYT | دايزر')
-        
-        var channel =member.guild.channels.find('name', 'leave')
-        if (!channel) return;
-        channel.send({embed : embed});
-        })
+
 
 
 
