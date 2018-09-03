@@ -560,8 +560,7 @@ client.on('guildMemberRemove', member => {
     .setTitle(`👋Leave Member💣`)
     .setDescription(`👑Good Bay👑`)
     .addField('💔تبقى بعد خروج صديقناℹ',`**[ ${member.guild.memberCount} ]**`,true)
-    .setColor('RANDOM')
-    .setFooter(`✅DyzerYT | دايزر BOT😉`, '')
+    .setColor('RED')
 
 var channel =member.guild.channels.find('name', 'leave')
 if (!channel) return;
