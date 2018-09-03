@@ -516,7 +516,6 @@ client.on('guildMemberAdd', member => {
     .setDescription(`👋Welcome To Server👋`)
     .addField('You Number-أنت رقم',`**[ ${member.guild.memberCount} ]**`,true)
     .setColor('RANDOM')
-    .setFooter(`DyzerYT | دايزر BOT`, '')
 
 var channel =member.guild.channels.find('name', 'welcome')
 if (!channel) return;
