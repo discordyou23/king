@@ -558,19 +558,7 @@ channel.send({embed : embed});
 
 
 
-client.on('guildMemberAdd', member => {
-    var embed = new Discord.RichEmbed()
-    .setAuthor(member.user.username, member.user.avatarURL)
-    .setThumbnail(member.user.avatarURL)
-    .setTitle(`👑join Member👑`)
-    .setDescription(`👋Welcome To Server👋`)
-    .addField('You Number-أنت رقم',`**[ ${member.guild.memberCount} ]**`,true)
-    .setColor('RED')
 
-var channel =member.guild.channels.find('name', 'welcome')
-if (!channel) return;
-channel.send({embed : embed});
-});
 
 
 
@@ -1266,6 +1254,20 @@ Sender <@${message.author.id}>                                                  
     
     
     
+client.on('guildMemberAdd', member => {
+    var embed = new Discord.RichEmbed()
+    .setAuthor(member.user.username, member.user.avatarURL)
+    .setThumbnail(member.user.avatarURL)
+    .setTitle(`👑join Member👑`)
+    .setDescription(`👋Welcome To Server👋`)
+    .addField('You Number-أنت رقم',`**[ ${member.guild.memberCount} ]**`,true)
+    .addField('Dyzer_YT Bot')
+    .setColor('RED')
+
+var channel =member.guild.channels.find('name', 'welcome')
+if (!channel) return;
+channel.send({embed : embed});
+});
 
 
 	  
