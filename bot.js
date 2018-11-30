@@ -5,7 +5,8 @@ const dateFormat = require('dateformat');
 const fs = require('fs');
 var Canvas = require('canvas')
 var jimp = require('jimp')
-const prefix = "?";
+const adminprefix = "R";
+const prefix = "R";
 client.on('ready', () => {
     console.log('I am ready!');
 });
@@ -20,7 +21,7 @@ client.on('message', message => {
 
 
 client.on('ready', () => {                           
-client.user.setGame(`Kinges System/?help`,'https://www.twitch.tv/fofodiscord');                                                                                                                                                                                                                                                                                                                                                                                                                            
+client.user.setGame(`_Royal Force Games©/Soon`);                                                                                                                                                                                                                                                                                                                                                                                                                            
 });
 
 
@@ -50,7 +51,7 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     console.log(`in ${client.guilds.size} servers `)
     console.log(`[Codes] ${client.users.size}`)
-    client.user.setStatus("idle")
+    client.user.setStatus("online")
 });
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 client.on('message', async msg => { // eslint-disable-line
@@ -66,7 +67,7 @@ client.on('message', async msg => { // eslint-disable-line
 	let command = msg.content.toLowerCase().split(" ")[0];
 	command = command.slice(prefix.length)
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-	if (command === `play`) {
+	if (command === `h`) {
 		const voiceChannel = msg.member.voiceChannel;
 		if (!voiceChannel) return msg.channel.send('يجب توآجد حضرتك بروم صوتي .');
 		const permissions = voiceChannel.permissionsFor(msg.client.user);
@@ -127,30 +128,30 @@ ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 
 			return handleVideo(video, msg, voiceChannel);
 		}//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-	} else if (command === `skip`) {
+	} else if (command === `sip`) {
 		if (!msg.member.voiceChannel) return msg.channel.send('أنت لست بروم صوتي .');
 		if (!serverQueue) return msg.channel.send('لا يتوفر مقطع لتجآوزه');
 		serverQueue.connection.dispatcher.end('تم تجآوز هذآ المقطع');
 		return undefined;
-	} else if (command === `stop`) {//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
+	} else if (command === `sp`) {//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 		if (!msg.member.voiceChannel) return msg.channel.send('أنت لست بروم صوتي .');
 		if (!serverQueue) return msg.channel.send('لا يتوفر مقطع لإيقآفه');
 		serverQueue.songs = [];
 		serverQueue.connection.dispatcher.end('تم إيقآف هذآ المقطع');
 		return undefined;
-	} else if (command === `vol`) {
+	} else if (command === `v`) {
 		if (!msg.member.voiceChannel) return msg.channel.send('أنت لست بروم صوتي .');
 		if (!serverQueue) return msg.channel.send('لا يوجد شيء شغآل.');
 		if (!args[1]) return msg.channel.send(`:loud_sound: مستوى الصوت **${serverQueue.volume}**`);
 		serverQueue.volume = args[1];//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 		serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 50);
 		return msg.channel.send(`:speaker: تم تغير الصوت الي **${args[1]}**`);
-	} else if (command === `np`) {
+	} else if (command === `n`) {
 		if (!serverQueue) return msg.channel.send('لا يوجد شيء حالي ف العمل.');
 		const embedNP = new Discord.RichEmbed()
 	.setDescription(`:notes: الان يتم تشغيل : **${serverQueue.songs[0].title}**`)
 		return msg.channel.sendEmbed(embedNP);
-	} else if (command === `queue`) {
+	} else if (command === `eue`) {
 		//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 		if (!serverQueue) return msg.channel.send('لا يوجد شيء حالي ف العمل.');
 		let index = 0;
@@ -161,14 +162,14 @@ ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 ${serverQueue.songs.map(song => `**${++index} -** ${song.title}`).join('\n')}
 **الان يتم تشغيل** ${serverQueue.songs[0].title}`)
 		return msg.channel.sendEmbed(embedqu);
-	} else if (command === `pause`) {
+	} else if (command === `pe`) {
 		if (serverQueue && serverQueue.playing) {
 			serverQueue.playing = false;
 			serverQueue.connection.dispatcher.pause();
 			return msg.channel.send('تم إيقاف الموسيقى مؤقتا!');
 		}//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 		return msg.channel.send('لا يوجد شيء حالي ف العمل.');
-	} else if (command === "resume") {
+	} else if (command === "rme") {
 		if (serverQueue && !serverQueue.playing) {
 			serverQueue.playing = true;
 			serverQueue.connection.dispatcher.resume();
@@ -246,7 +247,7 @@ function play(guild, song) {
 
 
 client.on("message", message => {
- if (message.content === `${prefix}music`) {
+ if (message.content === `${prefix}ic`) {
   const embed = new Discord.RichEmbed() //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
       .setColor("#678234")//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
       .setDescription(`
@@ -269,7 +270,7 @@ ${prefix}queue ⇏ ♠لمعرفة قآئمة التشغيل❗
 
 
    client.on('message', message => {
-     if (message.content === "?help") {
+     if (message.content === "lp") {
 message.author.send("Kinges System Bot" + `  **
 
 =======================================
@@ -505,56 +506,8 @@ client.on('message', message => {
 });
 
 
- 
 
 
-
-
-
-
-
-
-
-  client.on("message", msg => {
-           var prefix = "?";
-  if(msg.content.startsWith (prefix + "id")) {
-    if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');
-      const embed = new Discord.RichEmbed();
-  embed.addField(":cloud_tornado:  الاسم", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
-          .addField(":id:  الايدي", `**[ ${msg.author.id} ]**`, true)
-          .setColor("RANDOM")
-          .setFooter(msg.author.username , msg.author.avatarURL)
-          .setThumbnail(`${msg.author.avatarURL}`)
-          .setTimestamp()
-          .setURL(`${msg.author.avatarURL}`)
-          .addField(':spy:  الحالة', `**[ ${msg.author.presence.status.toUpperCase()} ]**`, true)
-          .addField(':satellite_orbital:   يلعب', `**[ ${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name} ]**`, true)
-          .addField(':military_medal:  الرتب', `**[ ${msg.member.roles.filter(r => r.name).size} ]**`, true)
-          .addField(':robot:  هل هو بوت', `**[ ${msg.author.bot.toString().toUpperCase()} ]**`, true);
-      msg.channel.send({embed: embed})
-	    }
-});
-
-
-
-
-
-
-
-client.on('guildMemberRemove', member => {
-    var embed = new Discord.RichEmbed()
-    .setAuthor(member.user.username, member.user.avatarURL)
-    .setThumbnail(member.user.avatarURL)
-    .setTitle(`👋Leave Member💣`)
-    .setDescription(`👑Good Bay👑`)
-    .addField('💔تبقى بعد خروج صديقناℹ',`**[ ${member.guild.memberCount} ]**`,true)
-    .setColor('RED')
-
-var channel =member.guild.channels.find('name', 'leave')
-if (!channel) return;
-channel.send({embed : embed});
-});
-        
 
 
 
@@ -735,7 +688,7 @@ mentionned.send(` :credit_card: | Transfer Receipt \`\`\`You have received ${arg
 
 
   client.on('message', message => {
-      if (message.content.startsWith(prefix + 'clear')) {
+      if (message.content.startsWith(prefix + 'clr')) {
     if(!message.channel.guild) return;
 let args = message.content.split(" ").slice(1);
 
@@ -760,7 +713,7 @@ let args = message.content.split(" ").slice(1);
 
 
   client.on('message', message => {
-    if (message.content.startsWith("?avatar")) {
+    if (message.content.startsWith("?atar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -785,7 +738,7 @@ let args = message.content.split(" ").slice(1);
 
           if(!message.channel.guild) return;
    if(message.author.bot) return;
-      if(message.content === prefix + "image"){
+      if(message.content === prefix + "ime"){
           const embed = new Discord.RichEmbed()
 
       .setTitle(`This is  ** ${message.guild.name} **  Photo !`)
@@ -813,14 +766,14 @@ client.on('message', message => {
   let args = message.content.split(" ").slice(1);
 
 // -say
-  if (command === "say") {
+  if (command === "y") {
           message.delete()
     message.channel.sendMessage(args.join(" ")).catch(console.error);
   }
   
  
 
-if (command == "embed") {
+if (command == "eed") {
     let say = new Discord.RichEmbed()
   .setThumbnail(message.author.avatarURL)  
   .setAuthor(message.author.username)
@@ -851,7 +804,7 @@ client.on('message', message => {
 
   let args = message.content.split(" ").slice(1);
 
-  if (command == "kick") {
+  if (command == "kk") {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
 
   if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.reply("**You Don't Have ` KICK_MEMBERS ` Permission**");
@@ -891,7 +844,7 @@ client.on('message', message => {
 
   let args = message.content.split(" ").slice(1);
 
-  if (command == "ban") {
+  if (command == "an") {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
 
   if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**You Don't Have ` BAN_MEMBERS ` Permission**");
@@ -929,7 +882,7 @@ if (!message.content.startsWith(prefix)) return;
 	let command = message.content.split(" ")[0];
 	 command = command.slice(prefix.length);
 	let args = message.content.split(" ").slice(1);
-	if (command == "mute") {
+	if (command == "me") {
 		if (!message.channel.guild) return;
 		if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGES")) return message.reply("انت لا تملك صلاحيات !! ").then(msg => msg.delete(5000));
 		if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return message.reply("البوت لايملك صلاحيات ").then(msg => msg.delete(5000));;
@@ -1022,277 +975,15 @@ if (message.content.startsWith("?addrole")) {
 });
 
 
- client.on("roleCreate", role => {
-  client.setTimeout(() => {
-    role.guild.fetchAuditLogs({
-        limit: 1,
-        type: 30
-      })
-      .then(audit => {
-        let exec = audit.entries.map(a => a.executor.username)
-        try {
-           let log = role.guild.channels.find('name', 'log');
-          if (!log) return;
-          let embed = new Discord.RichEmbed()
-            .setColor('RANDOM')
-            .setTitle('➕ RoleCreated')
-            .addField('Role Name', role.name, true)
-            .addField('Role ID', role.id, true)
-            .addField('By', exec, true)
-            .setTimestamp()
-          log.send(embed).catch(e => {
-            console.log(e);
-          });
-        } catch (e) {
-          console.log(e);
-        }
-      })
-  }, 1000)
-})
- client.on("roleDelete", role => {
-  client.setTimeout(() => {
-    role.guild.fetchAuditLogs({
-        limit: 1,
-        type: 30
-      })
-      .then(audit => {
-        let exec = audit.entries.map(a => a.executor.username)
-        try {
-           let log = role.guild.channels.find('name', 'log');
-          if (!log) return;
-          let embed = new Discord.RichEmbed()
-            .setColor('RANDOM')            
-            .setTitle('❌ RoleDeleted')
-            .addField('Role Name:', role.name, true)
-            .addField('Role ID:', role.id, true)
-            .addField('By:', exec, true)
-            .setTimestamp()
-          log.send(embed).catch(e => {
-            console.log(e);
-          });
-        } catch (e) {
-          console.log(e);
-        }
-      })
-  }, 1000)
-})
-   client.on("roleUpdate", (re,updated) => {
-    client.setTimeout(() => {
-      re.guild.fetchAuditLogs({
-          limit: 1,
-          type: 30
-        })
-        .then(audit => {
-          let exec = audit.entries.map(a => a.executor.username)
-          try {
-  
-            let log = re.guild.channels.find('name', 'log');
-            if (!log) return;
-            let embed = new Discord.RichEmbed()
-              .setColor('BLACK')
-              .setTitle("✏  Role Name Updated")
-              .addField("Old",`${re.name}`,true)
-              .addField("New",`${updated.name}`,true )
-              .addField("Role id",`${re.id}`,true )
-              .addField('By', exec, true)
-              .setTimestamp()
-            log.send(embed).catch(e => {
-              console.log(e);
-            });
-          } catch (e) {
-            console.log(e);
-          }
-        })
-    }, 1000)
-  })
- client.on("channelDelete",  dc => {
-  const channel = dc.guild.channels.find("name", "log")
-  if(channel) {
-  var embed = new Discord.RichEmbed()
-  .setTitle(dc.guild.name)
-  .setDescription(`***Channel Deleted Name : *** **${dc.name}** ⬅️`)
-  .setColor(`RANDOM`)
-  .setTimestamp();
-  channel.sendEmbed(embed)
-  }
-  });
-   
-  
-client.on('messageUpdate', (message, newMessage) => {
-    if (message.content === newMessage.content) return;
-    if (!message || !message.id || !message.content || !message.guild || message.author.bot) return;
-    const channel = message.guild.channels.find('name', 'log');
-    if (!channel) return;
-     let embed = new Discord.RichEmbed()
-       .setAuthor(`${message.author.tag}`, message.author.avatarURL)
-       .setColor('RANDOM')
-       .setDescription(`✏ **Message Edited
-Sender <@${message.author.id}>                                                                                                                         Edited In** <#${message.channel.id}>\n\nBefore Edited:\n \`${message.cleanContent}\`\n\nAfter Edited:\n \`${newMessage.cleanContent}\``)
-       .setTimestamp();
-     channel.send({embed:embed});
- });
- client.on('messageDelete', message => {
-    if (!message || !message.id || !message.content || !message.guild || message.author.bot) return;
-    const channel = message.guild.channels.find('name', 'log');
-    if (!channel) return;
-    let embed = new Discord.RichEmbed()
-       .setAuthor(`${message.author.tag}`, message.author.avatarURL)
-       .setColor('RANDOM')
-       .setDescription(`🗑️ **Message Deleted**
-**Sender <@${message.author.id}>                                                                                                                        Deleted In** <#${message.channel.id}>\n\n \`${message.cleanContent}\``)
-       .setTimestamp();
-     channel.send({embed:embed});
- });
- client.on('guildMemberAdd', member => {
-    if (!member || !member.id || !member.guild) return;
-    const guild = member.guild;
-	
-    const channel = member.guild.channels.find('name', 'log');
-    if (!channel) return;
-    let memberavatar = member.user.avatarURL
-    const fromNow = moment(member.user.createdTimestamp).fromNow();
-    const isNew = (new Date() - member.user.createdTimestamp) < 900000 ? '🆕' : '';
-    
-    let embed = new Discord.RichEmbed()
-       .setAuthor(`${member.user.tag}`, member.user.avatarURL)
-	   .setThumbnail(memberavatar)
-       .setColor('RANDOM')
-       .setDescription(`📥 <@${member.user.id}> **Joined To The Server**\n\n`)
-       .setTimestamp();
-     channel.send({embed:embed});
-});
- client.on('guildMemberRemove', member => {
-    if (!member || !member.id || !member.guild) return;
-    const guild = member.guild;
-	
-    const channel = member.guild.channels.find('name', 'log');
-    if (!channel) return;
-    let memberavatar = member.user.avatarURL
-    const fromNow = moment(member.joinedTimestamp).fromNow();
-    
-    let embed = new Discord.RichEmbed()
-       .setAuthor(`${member.user.tag}`, member.user.avatarURL)
-	   .setThumbnail(memberavatar)
-       .setColor('RAMDOM')
-       .setDescription(`📤 <@${member.user.id}> **Leave From Server**\n\n`)
-       .setTimestamp();
-     channel.send({embed:embed});
-});
- client.on('voiceStateUpdate', (oldM, newM) => {
-  let m1 = oldM.serverMute;
-  let m2 = newM.serverMute;
-   let d1 = oldM.serverDeaf;
-  let d2 = newM.serverDeaf;
-   let ch = oldM.guild.channels.find('name', 'log')
-  if(!ch) return;
-     oldM.guild.fetchAuditLogs()
-    .then(logs => {
-       let user = logs.entries.first().executor
-     if(m1 === false && m2 === true) {
-       let embed = new Discord.RichEmbed()
-       .setAuthor(`${newM.user.tag}`, newM.user.avatarURL)
-       .setDescription(`${newM} has muted in server`)
-       .setFooter(`By : ${user}`)
-        ch.send(embed)
-    }
-    if(m1 === true && m2 === false) {
-       let embed = new Discord.RichEmbed()
-       .setAuthor(`${newM.user.tag}`, newM.user.avatarURL)
-       .setDescription(`${newM} has unmuted in server`)
-       .setFooter(`By : ${user}`)
-       .setTimestamp()
-        ch.send(embed)
-    }
-    if(d1 === false && d2 === true) {
-       let embed = new Discord.RichEmbed()
-       .setAuthor(`${newM.user.tag}`, newM.user.avatarURL)
-       .setDescription(`${newM} has deafened in server`)
-       .setFooter(`By : ${user}`)
-       .setTimestamp()
-        ch.send(embed)
-    }
-    if(d1 === true && d2 === false) {
-       let embed = new Discord.RichEmbed()
-       .setAuthor(`${newM.user.tag}`, newM.user.avatarURL)
-       .setDescription(`${newM} has undeafened in server`)
-       .setFooter(`By : ${user}`)
-       .setTimestamp()
-        ch.send(embed)
-    }
-  })
-});
-   client.on("guildBanAdd", (guild, member) => {
-  client.setTimeout(() => {
-    guild.fetchAuditLogs({
-        limit: 1,
-        type: 22
-      })
-      .then(audit => {
-        let exec = audit.entries.map(a => a.executor.username);
-        try {
-          let log = guild.channels.find('name', 'log');
-          if (!log) return;
-          client.fetchUser(member.id).then(myUser => {
-          let embed = new Discord.RichEmbed()
-        .setAuthor(exec)
-        .setThumbnail(myUser.avatarURL)
-        .addField('- Banned User:',`**${myUser.username}**`,true)
-        .addField('- Banned By:',`**${exec}**`,true)
-        .setFooter(myUser.username,myUser.avatarURL)
-            .setTimestamp();
-          log.send(embed).catch(e => {
-            console.log(e);
-          });
-          });
-        } catch (e) {
-          console.log(e);
-        }
-      });
-  }, 1000);
-});
-    
-    
-    
-    
-client.on('guildMemberAdd', member => {
-    var embed = new Discord.RichEmbed()
-    .setAuthor(member.user.username, member.user.avatarURL)
-    .setThumbnail(member.user.avatarURL)
-    .setTitle(`👑join Member👑`)
-    .setDescription(`👋Welcome To Server👋`)
-    .addField('You Number-أنت رقم',`**[ ${member.guild.memberCount} ]**`,true)
-    .addField('Kinges System Bot')
-    .setColor('RED')
-
-var channel =member.guild.channels.find('name', 'welcome')
-if (!channel) return;
-channel.send({embed : embed});
-});
-
-
+ 
+ 
 	  
 
 
-
-
-
-
-
   client.on('message', msg => {
-  if(msg.content === '?help')
+  if(msg.content === 'p')
   msg.reply('تم الأرسال بلخاص|✅')
 });
-
-
-
-
-
-
-
-
-
-
-
 
 
 
